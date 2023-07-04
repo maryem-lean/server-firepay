@@ -12,7 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-        .allowedOriginPatterns("https://frontend-firepay-test.onrender.com")
+        .allowedOriginPatterns("https://fire-pay-web-4d73b744cf9d.herokuapp.com/")
         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
         .allowedHeaders("Content-Type", "Authorization")
         .allowCredentials(true);
