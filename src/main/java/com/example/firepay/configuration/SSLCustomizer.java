@@ -67,7 +67,7 @@ public class SSLCustomizer implements RestTemplateCustomizer {
 
         return SSLContextBuilder.create()
                 .loadTrustMaterial((chain, authType) -> true)
-                .loadKeyMaterial(p12File, p12FilePassword.toCharArray(), p12FilePassword.toCharArray())
+                .loadKeyMaterial(classLoader.getResource(p12FileName).toURI().toURL(), p12FilePassword.toCharArray(), p12FilePassword.toCharArray())
                 .build();
     }
 }
