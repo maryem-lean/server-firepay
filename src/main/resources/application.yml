@@ -5,13 +5,13 @@ app.token:
   50676d15-e076-4cdf-be11-15f8154324d0
 
   # Lean API base url
-lean.base.host:
-  https://sandbox.leantech.me
-
+lean.base.host: https://api.leantech.me
+  
   # Location of the prod certificates and keys
-certificate.name: lean_sandbox_cert_chain
-private.key.name: sandbox_privatekey.pem
-public.key.name: sandbox_certificate.crt
+certificate.name: lean_prod_cert_chain
+private.key.name: prod_privatekey.pem
+public.key.name: prod_certificate.crt
+
 
 p12.filename: firepay.p12
 p12.password: 12345
