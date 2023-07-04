@@ -18,9 +18,9 @@ p12.password: 12345
 
 spring:
   datasource:
-    password: qrahu82cXWyWE65ntmewkLUGDRyeU85v
-    url: jdbc:postgresql://dpg-cicqq7t9aq03rjg2uaf0-a.frankfurt-postgres.render.com:5432/firepay
-    username: intern
+    password: leandphackathon2023
+    url: jdbc:postgresql://db.abimrutwiszevauaedho.supabase.co:5432/postgres?user=postgres&password=leandphackathon2023
+    username: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
     database: POSTGRESQL
