@@ -62,9 +62,7 @@ public class SSLCustomizer implements RestTemplateCustomizer {
      */
     private SSLContext buildSSLContextFromPKCS12() throws NoSuchAlgorithmException, KeyStoreException, UnrecoverableKeyException, CertificateException, IOException, KeyManagementException, URISyntaxException {
         ClassLoader classLoader = getClass().getClassLoader();
-        classLoader.getResource(p12FileName);
-        File p12File = new File(classLoader.getResource(p12FileName).toURI());
-
+    
         return SSLContextBuilder.create()
                 .loadTrustMaterial((chain, authType) -> true)
                 .loadKeyMaterial(classLoader.getResource(p12FileName).toURI().toURL(), p12FilePassword.toCharArray(), p12FilePassword.toCharArray())
