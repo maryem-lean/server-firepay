@@ -1,0 +1,39 @@
+# Get your lean api token from dev portal (https://dev.leantech.me)
+# production
+logging.level.org.apache.http: DEBUG
+app.token:
+  50676d15-e076-4cdf-be11-15f8154324d0
+
+  # Lean API base url
+lean.base.host:
+  https://sandbox.leantech.me
+
+  # Location of the prod certificates and keys
+certificate.name: lean_sandbox_cert_chain
+private.key.name: sandbox_privatekey.pem
+public.key.name: sandbox_certificate.crt
+
+p12.filename: firepay.p12
+p12.password: 12345
+
+spring:
+  datasource:
+    password: qrahu82cXWyWE65ntmewkLUGDRyeU85v
+    url: jdbc:postgresql://dpg-cicqq7t9aq03rjg2uaf0-a.frankfurt-postgres.render.com:5432/firepay
+    username: intern
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    showSql: false
+    generateDdl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddlAuto: validate
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
